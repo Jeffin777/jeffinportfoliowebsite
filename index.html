@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a789d4">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title> Jeffin-frontent </title>
+</head>
+
+<body>
+    <!--=============== SCROLL PROGRESS BAR ===============-->
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+    <!--=============== CUSTOM CURSOR ===============-->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!--=============== LOADING SCREEN ===============-->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <!-- Logo Animation -->
+            <div class="loading-logo">
+                <div class="logo-initials">
+                    <span class="initial-j">J</span>
+                </div>
+            </div>
+
+            <!-- Typing Effect Text -->
+            <div class="typing-container">
+                <h2 class="loading-text">
+                    <span id="typed-text"></span>
+                    <span class="cursor">|</span>
+                </h2>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">0%</div>
+            </div>
+
+            <p class="loading-subtitle">Loading experience...</p>
+            <p class="loading-note">Desktop for better experience</p>
+        </div>
+    </div>
+
+    <!--=============== CERTIFICATE MODAL ===============-->
+    <div id="cert-modal" class="cert-modal">
+        <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
+        <img class="cert-modal-content" id="cert-img">
+        <div id="cert-caption"></div>
+    </div>
+
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Jeffin</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#education" class="nav__link">
+                            <i class='bx bxs-graduation'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== theme change button ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">JEFFIN JOSE</h1>
+    
+                    <h3 class="home__education">
+                        <span class="typewriter-text"></span>
+                    </h3>
+                    <h5 class="home__intro">A developer who loves blending technology with creativity to craft innovative solutions.</h5>
+                    <div class="home__button">
+                        <a download="" href="assets/pdf/myresume%20(1).pdf" class="button button--ghost">
+                            Download Resume
+                        </a>
+
+                        <a href="#about" class="button">About</a>
+                    </div>
+                </div>
+
+                <div class="home__handle">
+                    <img src="assets/img/perfil.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://linkedin.com/in/jeffinjosepanamkuttiyil" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/Jeffin777" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.instagram.com/jeffin_.jo._?igsh=ejczNzY0cnB5dHB1" target="_blank" class="home__social-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+
+            <div class="about__container container">
+                <!-- Main About Content -->
+                <div class="about__data">
+                    <div class="about__content">
+                        <div class="about__photo-wrapper">
+                            <div class="about__photo-container">
+                                <img src="assets/img/WhatsApp Image 2025-12-18 at 1.05.06 PM.jpeg"
+                                     alt="Portrait of Jeffin"
+                                     class="about__img">
+                                <div class="about__photo-overlay">
+                                    <div class="about__photo-text">
+                                        <span>CS Student</span>
+                                        <span>Developer</span>
+                                        <span>Problem Solver</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__text">
+                            <p class="about__description">
+                                Hello, I'm Jeffin — a committed student of Computer Science with great interest in modern web development and crafting meaningful digital experiences. I love creating clean, responsive interfaces using React.js, working with REST APIs, and bringing ideas to life through intuitive user experiences.
+
+        With a solid programming foundation in Python, C, and Java, along with practical knowledge of front-end tools, Git workflows, and the software development life cycle, I approach every project with clarity and curiosity. I enjoy solving problems, learning new technologies, and improving my craft one step at a time.
+
+        I'm a positive, reliable, and result-oriented person who loves collaborating, experimenting, and continuously growing as a developer. Whether crafting interactive UI components, integrating APIs, or optimizing code, I aim to create work that feels thoughtful, efficient, and user-focused.
+                            </p>
+                            <a href="#contact" class="button about__button-contact">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey Timeline -->
+                <div class="about__journey">
+                    <div class="journey__header">
+                        <h3 class="about__section-title">My Journey</h3>
+                        <div class="journey__subtitle">From curiosity to creation</div>
+                    </div>
+                    <div class="journey__timeline">
+                        <div class="timeline__line"></div>
+
+                        <div class="timeline__item timeline__item--left">
+                            <div class="timeline__content">
+                                <div class="timeline__year">2019</div>
+                                <div class="timeline__card">
+                                    <div class="timeline__icon icon-seed">
+                                        <i class='bx bx-leaf'></i>
+                                    </div>
+                                    <div class="timeline__info">
+                                        <h4 class="timeline__title">First Line of Code</h4>
+                                        <p class="timeline__description">Started my programming journey with Python basics and simple scripts that sparked my passion for coding.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item timeline__item--right">
+                            <div class="timeline__content">
+                                <div class="timeline__year">2022</div>
+                                <div class="timeline__card">
+                                    <div class="timeline__icon icon-graduation">
+                                        <i class='bx bx-book-open'></i>
+                                    </div>
+                                    <div class="timeline__info">
+                                        <h4 class="timeline__title">CS Degree</h4>
+                                        <p class="timeline__description">Began B.Tech in Computer Science at APJ Abdul Kalam Technological University, diving deep into algorithms and systems.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item timeline__item--left">
+                            <div class="timeline__content">
+                                <div class="timeline__year">2023</div>
+                                <div class="timeline__card">
+                                    <div class="timeline__icon icon-web">
+                                        <i class='bx bx-code-block'></i>
+                                    </div>
+                                    <div class="timeline__info">
+                                        <h4 class="timeline__title">Web Dev Discovery</h4>
+                                        <p class="timeline__description">Discovered the world of web development and fell in love with creating beautiful, interactive digital experiences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item timeline__item--right">
+                            <div class="timeline__content">
+                                <div class="timeline__year">2024</div>
+                                <div class="timeline__card">
+                                    <div class="timeline__icon icon-rocket">
+                                        <i class='bx bx-rocket'></i>
+                                    </div>
+                                    <div class="timeline__info">
+                                        <h4 class="timeline__title">Major Projects</h4>
+                                        <p class="timeline__description">Built full-stack applications and AI-powered solutions, turning ideas into reality through code.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fun Facts Section -->
+                <div class="about__fun-facts">
+                    <div class="fun-facts__header">
+                        <h3 class="about__section-title">Beyond Code</h3>
+                        <div class="fun-facts__subtitle">What makes me tick</div>
+                    </div>
+                    <div class="fun-facts__showcase">
+                        <div class="fun-fact__card coffee-card">
+                            <div class="fun-fact__visual">
+                                <div class="fun-fact__emoji">☕</div>
+                                <div class="fun-fact__particles">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="fun-fact__info">
+                                <h4 class="fun-fact__title">Coffee Fueled</h4>
+                                <p class="fun-fact__description">5+ cups daily keep me coding through the night. Coffee is my debugging companion!</p>
+                                <button class="coffee-button" onclick="openCoffeeVideo()">
+                                    Coffee for You <i class='bx bx-play'></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fun-fact__card spotify-card">
+                            <div class="fun-fact__visual">
+                                <div class="spotify-icon-wrapper">
+                                    <i class='bx bxl-spotify'></i>
+                                </div>
+                                <div class="music-waves">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="fun-fact__info">
+                                <h4 class="fun-fact__title">Music</h4>
+                                <p class="fun-fact__description">From Lofi beats to classical-music enhances every coding session.</p>
+                                <a href="https://open.spotify.com/playlist/09k1IUYevrXaUT9wPE25iH?si=YuQv72qYTP-yYUVh7G4lRQ" target="_blank" class="spotify-button">
+                                    Check Playlist <i class='bx bx-play'></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="fun-fact__card">
+                            <div class="fun-fact__visual">
+                                <div class="fun-fact__emoji">🚀</div>
+                                <div class="fun-fact__particles">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="fun-fact__info">
+                                <h4 class="fun-fact__title">Tech Explorer</h4>
+                                <p class="fun-fact__description">Always experimenting with new technologies and staying ahead of the curve in tech trends.</p>
+                                <a href="https://github.com/trending" target="_blank" class="tech-button">
+                                    Explore What's Next <i class='bx bx-play'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== EDUCATION ===============-->
+        <section class="education section" id="education">
+            <span class="section__subtitle">My Educational Journey</span>
+            <h2 class="section__title">Education</h2>
+
+            <div class="education__container container">
+                <div class="education__timeline">
+                    <!-- Education Item 1 -->
+                    <div class="education__item">
+                        <div class="education__content">
+                            <div class="education__icon">
+                                <i class='bx bxs-graduation'></i>
+                            </div>
+                            <div class="education__data">
+                                <h3 class="education__title">Bachelor of Computer Science and Engineering</h3>
+                                <span class="education__institution">A P J Abdul Kalam Technological University</span>
+                                <span class="education__year">2022 - 2026</span>
+                                <p class="education__description">
+                                    Comprehensive education in computer science fundamentals, software engineering,
+                                    data structures, algorithms, and modern web technologies. Specialized in full-stack
+                                    development and AI integration.
+                                </p>
+                                <div class="education__highlights">
+                                    <span class="education__highlight">CGPA: 7.66/10</span>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="education__item">
+                        <div class="education__content">
+                            <div class="education__icon">
+                                <i class='bx bxs-school'></i>
+                            </div>
+                            <div class="education__data">
+                                <h3 class="education__title">Higher Secondary Education</h3>
+                                <span class="education__institution">Govt. Higher Secondary School</span>
+                                <span class="education__year">2020 - 2022</span>
+                                <p class="education__description">
+                                    Focused on science and mathematics.
+                                    Developed strong foundation in programming and logical thinking.
+                                </p>
+                                <div class="education__highlights">
+                                    <span class="education__highlight">Grade: 90%</span>
+                                    <span class="education__highlight">Science Stream</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 3 -->
+                    <div class="education__item">
+                        <div class="education__content">
+                            <div class="education__icon">
+                                <i class='bx bx-book'></i>
+                            </div>
+                            <div class="education__data">
+                                <h3 class="education__title">Secondary Education</h3>
+                                <span class="education__institution">Chaldean Syrian Higher Secondary School</span>
+                                <span class="education__year">2014 - 2020</span>
+                                <p class="education__description">
+                                    Built fundamental knowledge in mathematics, science, and computer basics.
+                                    Participated in various extracurricular activities and science fairs.
+                                </p>
+                                <div class="education__highlights">
+                                    <span class="education__highlight">Grade: 98%</span>
+                                    <span class="education__highlight">Science Exbhition Winner</span>
+                                    <span class="education__highlight">Maths Exbhition Winner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <div class="education__certifications">
+                    <h3 class="certifications__title">Certifications & Courses</h3>
+                    <div class="certifications__container">
+                        <div class="certification__badge" data-platform="udemy" onclick="openCertModal('assets/certificates/react-cert.jpg', 'Mastering React')">
+                            <div class="badge__outer-ring">
+                                <div class="badge__inner-ring">
+                                    <div class="badge__icon">
+                                        <i class='bx bxl-react'></i>
+                                    </div>
+                                    <div class="badge__glow"></div>
+                                </div>
+                            </div>
+                            <div class="badge__content">
+                                <h4 class="badge__title">Mastering React</h4>
+                                <span class="badge__platform">Udemy</span>
+                                <span class="badge__year">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="certification__badge" data-platform="udemy" onclick="openCertModal('assets/certificates/python-cert.jpg', 'Python Programming')">
+                            <div class="badge__outer-ring">
+                                <div class="badge__inner-ring">
+                                    <div class="badge__icon">
+                                        <i class='bx bxl-python'></i>
+                                    </div>
+                                    <div class="badge__glow"></div>
+                                </div>
+                            </div>
+                            <div class="badge__content">
+                                <h4 class="badge__title">Python Programming</h4>
+                                <span class="badge__platform">Udemy</span>
+                                <span class="badge__year">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="certification__badge" data-platform="udemy" onclick="openCertModal('assets/certificates/prompt-cert.jpg', 'Prompt Engineering')">
+                            <div class="badge__outer-ring">
+                                <div class="badge__inner-ring">
+                                    <div class="badge__icon">
+                                        <i class='bx bx-brain'></i>
+                                    </div>
+                                    <div class="badge__glow"></div>
+                                </div>
+                            </div>
+                            <div class="badge__content">
+                                <h4 class="badge__title">Prompt Engineering</h4>
+                                <span class="badge__platform">Udemy</span>
+                                <span class="badge__year">2025</span>
+                            </div>
+                        </div>
+
+                        <div class="certification__badge" data-platform="udemy" onclick="openCertModal('assets/certificates/webdev-cert.jpg', 'Web Dev course')">
+                            <div class="badge__outer-ring">
+                                <div class="badge__inner-ring">
+                                    <div class="badge__icon">
+                                        <i class='bx bx-code-alt'></i>
+                                    </div>
+                                    <div class="badge__glow"></div>
+                                </div>
+                            </div>
+                            <div class="badge__content">
+                                <h4 class="badge__title">Web Dev course</h4>
+                                <span class="badge__platform">Udemy</span>
+                                <span class="badge__year">2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Additional Achievement Badges -->
+                        <div class="certification__badge" data-platform="infosys" onclick="openCertModal('assets/certificates/ai-cert.jpg', 'AI Foundation')">
+                            <div class="badge__outer-ring">
+                                <div class="badge__inner-ring">
+                                    <div class="badge__icon">
+                                        <i class='bx bx-chip'></i>
+                                    </div>
+                                    <div class="badge__glow"></div>
+                                </div>
+                            </div>
+                            <div class="badge__content">
+                                <h4 class="badge__title">AI Foundation</h4>
+                                <span class="badge__platform">Infosys Springboard</span>
+                                <span class="badge__year">2025</span>
+                            </div>
+                        </div>
+
+                        <div class="certification__badge" data-platform="nptel" onclick="openCertModal('assets/certificates/automation-cert.jpg', 'Automation in Production')">
+                            <div class="badge__outer-ring">
+                                <div class="badge__inner-ring">
+                                    <div class="badge__icon">
+                                        <i class='bx bx-cog'></i>
+                                    </div>
+                                    <div class="badge__glow"></div>
+                                </div>
+                            </div>
+                            <div class="badge__content">
+                                <h4 class="badge__title">Automation in Production</h4>
+                                <span class="badge__platform">NPTEL</span>
+                                <span class="badge__year">2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <span class="section__subtitle">My Abilities</span>
+            <h2 class="section__title">My Experience</h2>
+
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Frontend</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">HTML</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">CSS</h3>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Javascript</h3>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Bootstrap</h3>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Git</h3>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">React</h3>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Backend & APIs</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">FastAPI</h3>
+    
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Python</h3>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">MySQL</h3>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">RESET</h3>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Java</h3>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Mongo DB</h3>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+       <!--=============== SERVICES ===============-->
+<section class="services section">
+    <span class="section__subtitle">My Expertise</span>
+    <h2 class="section__title">What I Excel At</h2>
+
+    <div class="services__container container grid">
+
+        <!--======= SERVICE 1 =======-->
+        <div class="services__card">
+            <div class="serv">
+                <h3 class="services__title">Frontend <br> Development</h3>
+
+                <span class="services__button">
+                    See More <i class='bx bx-right-arrow services__icon'></i>
+                </span>
+            </div>
+
+            <div class="services__modal">
+                <div class="services__modal-content">
+                    <i class='bx bx-x services__modal-close'></i>
+
+                    <h3 class="services__modal-title">Frontend Development</h3>
+
+                    <p class="services__modal-description">
+                        Building responsive, user-focused interfaces using modern web technologies.
+                    </p>
+
+                    <ul class="services__modal-list">
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">HTML & CSS development</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Responsive UI design</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Smooth transitions & UI interactions</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Input validation & error handling</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">User experience improvements</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--======= SERVICE 2 =======-->
+        <div class="services__card">
+            <h3 class="services__title">Backend <br> Development</h3>
+
+            <span class="services__button">
+                See More <i class='bx bx-right-arrow services__icon'></i>
+            </span>
+
+            <div class="services__modal">
+                <div class="services__modal-content">
+                    <i class='bx bx-x services__modal-close'></i>
+
+                    <h3 class="services__modal-title">Backend Development</h3>
+
+                    <p class="services__modal-description">
+                        Developing secure, scalable backend systems and integrating APIs efficiently.
+                    </p>
+
+                    <ul class="services__modal-list">
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">FastAPI backend development</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">REST API integration</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Authentication & session handling</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">CRUD operations</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Database-driven features (MySQL, SQLite, MongoDB)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--======= SERVICE 3 =======-->
+        <div class="services__card">
+            <h3 class="services__title">AI-Powered <br> Solutions</h3>
+
+            <span class="services__button">
+                See More <i class='bx bx-right-arrow services__icon'></i>
+            </span>
+
+            <div class="services__modal">
+                <div class="services__modal-content">
+                    <i class='bx bx-x services__modal-close'></i>
+
+                    <h3 class="services__modal-title">AI-Powered Solutions</h3>
+
+                    <p class="services__modal-description">
+                        Implementing AI features and real-time intelligent processing for modern applications.
+                    </p>
+
+                    <ul class="services__modal-list">
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">MediaPipe-based pose estimation</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Real-time rep counting & posture detection</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">AI content generation (SarvamAI APIs)</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Performance dashboards & data visualization</p>
+                        </li>
+
+                        <li class="services__modal-item">
+                            <i class='bx bx-check-circle'></i>
+                            <p class="services__modal-info">Secure user data & session management</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+        <!--=============== WORK ===============-->
+<section class="work section" id="work">
+    <div class="work__header">
+        <span class="section__subtitle">My Creative Journey</span>
+        <h2 class="section__title">
+            Featured <span class="highlight">Projects</span>
+        </h2>
+        <p class="work__description">
+            Discover my latest innovations and creative solutions that showcase the perfect blend of technology and design
+        </p>
+    </div>
+
+    <div class="work__container container">
+        <!--======= PROJECT 1 =======-->
+        <article class="work__card" data-category="web">
+            <div class="work__card-inner">
+                <div class="work__card-front">
+                    <div class="work__image-wrapper">
+                        <img src="assets/img/work1.jpg" alt="WeLift AI Fitness Tracker" class="work__img">
+                        <div class="work__overlay">
+                            <div class="work__category">AI & Fitness</div>
+                        </div>
+                    </div>
+                    <div class="work__content-front">
+                        <div class="work__tags">
+                            <span class="work__tag">Python</span>
+                            
+                            <span class="work__tag">MongoDB</span>
+                        </div>
+                        <h3 class="work__title">WeLift – AI Fitness Tracker</h3>
+                        <p class="work__excerpt">
+                            Real-time workout tracker using AI pose estimation for accurate rep counting and posture correction.
+                        </p>
+                        <button class="work__expand-btn" aria-label="Expand project details">
+                            <span class="btn-text">Explore Project</span>
+                            <i class='bx bx-plus btn-icon'></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="work__card-back">
+                    <div class="work__content-back">
+                        <div class="work__back-header">
+                            <h4 class="work__back-title">WeLift – AI Fitness Tracker</h4>
+                            <button class="work__close-btn" aria-label="Close project details">
+                                <i class='bx bx-x'></i>
+                            </button>
+                        </div>
+
+                        <p class="work__back-description">
+                            Advanced fitness application that leverages MediaPipe for real-time pose estimation,
+                            providing accurate workout tracking with posture correction and performance analytics.
+                        </p>
+
+                        <div class="work__features">
+                            <h5 class="features-title">Key Features</h5>
+                            <ul class="work__feature-list">
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Real-time pose estimation & rep counting</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>AI-powered posture detection & correction</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>JWT authentication & secure user profiles</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Comprehensive workout history dashboard</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Interactive performance visualization</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work__actions">
+                            <a href="https://github.com/Jeffin777/WeLift--Home-Workout-software" class="work__link secondary" target="_blank">
+                                <i class='bx bxl-github'></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--======= PROJECT 2 =======-->
+        <article class="work__card" data-category="web">
+            <div class="work__card-inner">
+                <div class="work__card-front">
+                    <div class="work__image-wrapper">
+                        <img src="assets/img/work2.jpg" alt="Lumora AI Artistic Gallery" class="work__img">
+                        <div class="work__overlay">
+                            <div class="work__category">AI & Creative</div>
+                        </div>
+                    </div>
+                    <div class="work__content-front">
+                        <div class="work__tags">
+                            <span class="work__tag">Python</span>
+                            <span class="work__tag">FastAPI</span>
+                            <span class="work__tag">AI</span>
+                        </div>
+                        <h3 class="work__title">Lumora – AI Artistic Gallery</h3>
+                        <p class="work__excerpt">
+                            AI-powered platform that generates poetic content and manages artistic collections with seamless user experience.
+                        </p>
+                        <button class="work__expand-btn" aria-label="Expand project details">
+                            <span class="btn-text">Explore Project</span>
+                            <i class='bx bx-plus btn-icon'></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="work__card-back">
+                    <div class="work__content-back">
+                        <div class="work__back-header">
+                            <h4 class="work__back-title">Lumora – AI Artistic Gallery</h4>
+                            <button class="work__close-btn" aria-label="Close project details">
+                                <i class='bx bx-x'></i>
+                            </button>
+                        </div>
+
+                        <p class="work__back-description">
+                            Innovative artistic platform that combines AI-powered content generation with elegant gallery management,
+                            creating a seamless experience for creative expression and digital art curation.
+                        </p>
+
+                        <div class="work__features">
+                            <h5 class="features-title">Key Features</h5>
+                            <ul class="work__feature-list">
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>AI-driven poetic content generation (SarvamAI)</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Secure user authentication & session handling</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Full CRUD operations with SQLite database</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Clean, intuitive user interface</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Seamless front-to-backend integration</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work__actions">
+                            <a href="https://github.com/Jeffin777/MyArtisticGallery" class="work__link secondary" target="_blank">
+                                <i class='bx bxl-github'></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--======= PROJECT 3 =======-->
+        <article class="work__card" data-category="web">
+            <div class="work__card-inner">
+                <div class="work__card-front">
+                    <div class="work__image-wrapper">
+                        <img src="assets/img/work3.jpg" alt="Weather Finder Real-Time App" class="work__img">
+                        <div class="work__overlay">
+                            <div class="work__category">Weather & API</div>
+                        </div>
+                    </div>
+                    <div class="work__content-front">
+                        <div class="work__tags">
+                            <span class="work__tag">React</span>
+                            <span class="work__tag">API</span>
+                            <span class="work__tag">JavaScript</span>
+                        </div>
+                        <h3 class="work__title">Weather Finder With Live Images</h3>
+                        <p class="work__excerpt">
+                            Modern weather application providing real-time weather data with beautiful, responsive design.
+                        </p>
+                        <button class="work__expand-btn" aria-label="Expand project details">
+                            <span class="btn-text">Explore Project</span>
+                            <i class='bx bx-plus btn-icon'></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="work__card-back">
+                    <div class="work__content-back">
+                        <div class="work__back-header">
+                            <h4 class="work__back-title">Weather Finder with Live Images – Real-Time App</h4>
+                            <button class="work__close-btn" aria-label="Close project details">
+                                <i class='bx bx-x'></i>
+                            </button>
+                        </div>
+
+                        <p class="work__back-description">
+                            Elegant weather application that fetches live weather data with live images through OpenWeatherMap API,
+                            featuring smooth animations, responsive design, and comprehensive weather information.
+                        </p>
+
+                        <div class="work__features">
+                            <h5 class="features-title">Key Features</h5>
+                            <ul class="work__feature-list">
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>OpenWeatherMap API integration</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Real-time weather updates with images & forecasts</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Dynamic React state management</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Mobile-first design & full responsiveness</span>
+                                </li>
+                                <li class="work__feature-item">
+                                    <i class='bx bx-check-circle feature-icon'></i>
+                                    <span>Comprehensive error handling & smooth transitions</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work__actions">
+                            <a href="https://github.com/Jeffin777/Weather-Finder" class="work__link secondary" target="_blank">
+                                <i class='bx bxl-github'></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+        <!--=============== DEV STATS ===============-->
+        <section class="dev-stats section">
+            <span class="section__subtitle">Code & Creativity</span>
+            <h2 class="section__title">Developer <span class="highlight">Insights</span></h2>
+
+            <div class="stats__container container">
+                <!-- Main Stats Grid -->
+                <div class="stats__grid">
+                    <div class="stat__card">
+                        <div class="stat__icon">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <div class="stat__content">
+                            <div class="stat__number" data-target="5000">0</div>
+                            <div class="stat__label">Lines of Code</div>
+                            <div class="stat__description">Written this year</div>
+                        </div>
+                    </div>
+
+                    <div class="stat__card">
+                        <div class="stat__icon">
+                            <i class='bx bx-coffee'></i>
+                        </div>
+                        <div class="stat__content">
+                            <div class="stat__number" data-target="365">0</div>
+                            <div class="stat__label">Cups of Coffee</div>
+                            <div class="stat__description">Debugging fuel</div>
+                        </div>
+                    </div>
+
+                    <div class="stat__card">
+                        <div class="stat__icon">
+                            <i class='bx bx-rocket'></i>
+                        </div>
+                        <div class="stat__content">
+                            <div class="stat__number" data-target="4">0</div>
+                            <div class="stat__label">Projects</div>
+                            <div class="stat__description">Completed & deployed</div>
+                        </div>
+                    </div>
+
+                    <div class="stat__card">
+                        <div class="stat__icon">
+                            <i class='bx bx-brain'></i>
+                        </div>
+                        <div class="stat__content">
+                            <div class="stat__number" data-target="5">0</div>
+                            <div class="stat__label">Technologies</div>
+                            <div class="stat__description">Mastered & learning</div>
+                        </div>
+                    </div>
+
+                    <div class="stat__card">
+                        <div class="stat__icon">
+                            <i class='bx bx-time-five'></i>
+                        </div>
+                        <div class="stat__content">
+                            <div class="stat__number" data-target="15">0</div>
+                            <div class="stat__label">Hours Coding</div>
+                            <div class="stat__description">Average per week</div>
+                        </div>
+                    </div>
+
+                    <div class="stat__card">
+                        <div class="stat__icon">
+                            <i class='bx bx-trophy'></i>
+                        </div>
+                        <div class="stat__content">
+                            <div class="stat__number" data-target="12">0</div>
+                            <div class="stat__label">Certifications</div>
+                            <div class="stat__description">Earned & ongoing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favorite Quote -->
+                <div class="quote__section">
+                    <div class="quote__container">
+                        <div class="quote__bg-decoration"></div>
+                        <div class="quote__card">
+                            <div class="quote__icon">
+                                <i class='bx bxs-quote-alt-left'></i>
+                            </div>
+                            <div class="quote__content">
+                                <blockquote class="quote__text">
+                                    "Code is poetry written in logic, where every function tells a story and every algorithm dances with mathematics."
+                                </blockquote>
+                                <div class="quote__divider"></div>
+                                <cite class="quote__author">
+                                    <span class="quote__author-name">Jeffin Jose Panamkuttiyil</span>
+                                    <span class="quote__author-role">Aspiring Software Engineer</span>
+                                </cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+            <sapn class="section__subtitle">Get in touch</sapn>
+            <h3 class="section__title">Contact Me</h3>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-info">Talk to me</h3>
+
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">jeffinjosepanamkuttiyil@gmail.com</span>
+
+                            <a href="mailto:jeffinjosepanamkuttiyil@gmail.com?subject=Contact from Portfolio" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">WhatsApp</h3>
+                            <span class="contact__card-data">+91 9383468672</span>
+
+                            <a href="https://wa.me/919383468672?text=Hi%20Jeffin,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" class="contact__button">
+                                Message Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-instagram contact__card-icon'></i>
+                            <h3 class="contact__card-title">Instagram</h3>
+                            <span class="contact__card-data">@jeffin_.jo._</span>
+
+                            <a href="https://www.instagram.com/jeffin_.jo._?igsh=ejczNzY0cnB5dHB1" target="_blank" class="contact__button">
+                                Follow Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-form">Write Me your Message</h3>
+
+                    <form id="contact-form" class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="name" class="contact__form-tag">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" class="contact__form-input" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="email" class="contact__form-tag">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" class="contact__form-input" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="message" class="contact__form-tag">Message</label>
+                            <textarea id="message" name="message" cols="30" rows="10" placeholder="Write your message"
+                                class="contact__form-input" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+
+                        <div id="form-status" class="form-status"></div>
+
+                        <button type="submit" class="button" id="submit-btn">
+                            <span id="btn-text">Send Message</span>
+                            <i class='bx bx-send' id="btn-icon"></i>
+                        </button>
+                    </form>
+
+                </div>
+
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <!-- Brand Section -->
+                <div class="footer__brand">
+                    <h1 class="footer__title">jeffin</h1>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__section">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Home</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#education" class="footer__link">Education</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#skills" class="footer__link">Skills</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#work" class="footer__link">Work</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer__section">
+                    <h3 class="footer__heading">Get In Touch</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class='bx bx-envelope footer__contact-icon'></i>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jeffinjosepanamkuttiyil@gmail.com" target="_blank" class="footer__contact-link">
+                                jeffinjosepanamkuttiyil@gmail.com
+                            </a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class='bx bxl-whatsapp footer__contact-icon'></i>
+                            <a href="https://wa.me/919383468672?text=Hi%20Jeffin,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" class="footer__contact-link">
+                                +91 9383468672
+                            </a>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class='bx bx-map footer__contact-icon'></i>
+                            <span class="footer__contact-text">Available for Remote Work</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer__social-wrapper">
+                <ul class="footer__social">
+                    <li class="footer__social-item">
+                        <a href="https://www.instagram.com/jeffin_.jo._?igsh=ejczNzY0cnB5dHB1" target="_blank" class="footer__social-link" aria-label="Instagram">
+                            <i class='bx bxl-instagram footer__social-icon'></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://linkedin.com/in/jeffinjosepanamkuttiyil" target="_blank" class="footer__social-link" aria-label="LinkedIn">
+                            <i class='bx bxl-linkedin footer__social-icon'></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://github.com/Jeffin777" target="_blank" class="footer__social-link" aria-label="GitHub">
+                            <i class='bx bxl-github footer__social-icon'></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="mailto:jeffinjosepanamkuttiyil@gmail.com?subject=Contact from Portfolio" class="footer__social-link" aria-label="Email">
+                            <i class='bx bx-envelope footer__social-icon'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <div class="footer__stats">
+                    <span class="footer__stat-item">
+                        <i class='bx bx-calendar'></i>
+                        Last Updated: <span id="last-updated">December 2025</span>
+                    </span>
+                    <span class="footer__stat-item">
+                        <i class='bx bx-code-alt'></i>
+                        Built with Love
+                    </span>
+                </div>
+                <span class="footer__copy">
+                   
+                </span>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== EMAILJS ===============-->
+    <!--
+    To set up EmailJS:
+    1. Go to https://www.emailjs.com/ and create an account
+    2. Create an email service (Gmail, Outlook, etc.)
+    3. Create an email template
+    4. Replace 'YOUR_PUBLIC_KEY', 'YOUR_SERVICE_ID', and 'YOUR_TEMPLATE_ID' below
+    -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== CONTACT FORM JS ===============-->
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+        })();
+
+        // Form validation and submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const formStatus = document.getElementById('form-status');
+
+            // Form validation
+            function validateForm() {
+                let isValid = true;
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // Name validation
+                if (name.length < 2) {
+                    document.getElementById('name-error').textContent = 'Name must be at least 2 characters';
+                    isValid = false;
+                } else {
+                    document.getElementById('name-error').textContent = '';
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                    isValid = false;
+                } else {
+                    document.getElementById('email-error').textContent = '';
+                }
+
+                // Message validation
+                if (message.length < 10) {
+                    document.getElementById('message-error').textContent = 'Message must be at least 10 characters';
+                    isValid = false;
+                } else {
+                    document.getElementById('message-error').textContent = '';
+                }
+
+                return isValid;
+            }
+
+            // Show status message
+            function showStatus(message, type) {
+                formStatus.textContent = message;
+                formStatus.className = `form-status ${type}`;
+                formStatus.style.display = 'block';
+
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            }
+
+            // Set loading state
+            function setLoading(isLoading) {
+                submitBtn.disabled = isLoading;
+                if (isLoading) {
+                    btnText.textContent = 'Sending...';
+                    btnIcon.className = 'bx bx-loader-alt bx-spin';
+                } else {
+                    btnText.textContent = 'Send Message';
+                    btnIcon.className = 'bx bx-send';
+                }
+            }
+
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                if (!validateForm()) {
+                    showStatus('Please fix the errors above', 'error');
+                    return;
+                }
+
+                setLoading(true);
+
+                // Prepare template parameters
+                const templateParams = {
+                    from_name: document.getElementById('name').value,
+                    from_email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+                    to_email: 'jeffinjosepanamkuttiyil@gmail.com'
+                };
+
+                // Send email using EmailJS
+                emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        showStatus('Message sent successfully! I\'ll get back to you soon.', 'success');
+                        contactForm.reset();
+                        setLoading(false);
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        showStatus('Failed to send message. Please try again or contact me directly.', 'error');
+                        setLoading(false);
+                    });
+            });
+
+            // Real-time validation
+            document.getElementById('name').addEventListener('input', function() {
+                if (this.value.trim().length >= 2) {
+                    document.getElementById('name-error').textContent = '';
+                }
+            });
+
+            document.getElementById('email').addEventListener('input', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailRegex.test(this.value)) {
+                    document.getElementById('email-error').textContent = '';
+                }
+            });
+
+            document.getElementById('message').addEventListener('input', function() {
+                if (this.value.trim().length >= 10) {
+                    document.getElementById('message-error').textContent = '';
+                }
+            });
+        });
+
+        // Coffee Video Modal Functionality - GIF-like behavior
+        function openCoffeeVideo() {
+            const modal = document.createElement('div');
+            modal.className = 'video-modal';
+            modal.innerHTML = `
+                <div class="video-modal-overlay" onclick="closeCoffeeVideo()"></div>
+                <div class="video-modal-content">
+                    <video class="coffee-video" autoplay muted playsinline>
+                        <source src="assets/vd/coffee-making.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // Add animation class after a small delay
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            
+            // Add error handling for video
+            const video = modal.querySelector('.coffee-video');
+            video.addEventListener('error', function(e) {
+                console.error('Video loading error:', e);
+                alert('Unable to load video. Please check if the video file exists at assets/vd/coffee-making.mp4');
+                closeCoffeeVideo();
+            });
+            
+            // Auto-close when video ends (GIF-like behavior)
+            video.addEventListener('ended', function() {
+                setTimeout(() => {
+                    closeCoffeeVideo();
+                }, 500); // Small delay before closing
+            });
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCoffeeVideo() {
+            const modal = document.querySelector('.video-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.remove();
+                    document.body.style.overflow = ''; // Restore body scroll
+                }, 300);
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCoffeeVideo();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
